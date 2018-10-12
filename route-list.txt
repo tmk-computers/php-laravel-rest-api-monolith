@@ -1,0 +1,49 @@
+
+C:\xampp\htdocs\php-laravel-rest-api-monolith>php artisan route:list
++--------+----------+-----------------------------------------+------+---------------------------------------------------------------------------+--------------+
+| Domain | Method   | URI                                     | Name | Action                                                                    | Middleware   |
++--------+----------+-----------------------------------------+------+---------------------------------------------------------------------------+--------------+
+|        | GET|HEAD | /                                       |      | Closure                                                                   | web          |
+|        | GET|HEAD | api/logout                              |      | Closure                                                                   | api,auth:api |
+|        | POST     | api/user/changepassword                 |      | App\Http\Controllers\Api\UserApiController@change_password                | api,auth:api |
+|        | POST     | api/user/checkEmailIdExist              |      | App\Http\Controllers\Api\UserApiController@checkEmailIdExist              | api          |
+|        | POST     | api/user/checkEmailVerified             |      | App\Http\Controllers\Api\UserApiController@checkEmailVerified             | api          |
+|        | POST     | api/user/checkMobileNumberVerified      |      | App\Http\Controllers\Api\UserApiController@checkMobileNumberVerified      | api          |
+|        | POST     | api/user/fbLogin                        |      | App\Http\Controllers\Api\UserApiController@FaceBookLogin                  | api          |
+|        | POST     | api/user/forgotpassword                 |      | App\Http\Controllers\Api\UserApiController@forgot_password                | api          |
+|        | POST     | api/user/googleLogin                    |      | App\Http\Controllers\Api\UserApiController@GoogleLogin                    | api          |
+|        | POST     | api/user/sendEmailPasswordChanged       |      | App\Http\Controllers\Api\UserApiController@sendEmail_PasswordChanged      | api,auth:api |
+|        | POST     | api/user/sendEmailProfileUpdated        |      | App\Http\Controllers\Api\UserApiController@sendEmail_ProfileUpdated       | api,auth:api |
+|        | POST     | api/user/sendEmailVerificationCode      |      | App\Http\Controllers\Api\UserApiController@sendEmail_VerificationCode     | api          |
+|        | POST     | api/user/sendEmailVerified              |      | App\Http\Controllers\Api\UserApiController@sendEmail_EmailVerified        | api          |
+|        | POST     | api/user/sendOtp                        |      | App\Http\Controllers\Api\UserApiController@sendOTPSMS                     | api          |
+|        | POST     | api/user/sendSMS                        |      | App\Http\Controllers\Api\UserApiController@sendSMS                        | api          |
+|        | POST     | api/user/signup                         |      | App\Http\Controllers\Api\UserApiController@signup                         | api          |
+|        | POST     | api/user/socialLogin                    |      | App\Http\Controllers\Api\UserApiController@SocialLogin                    | api          |
+|        | POST     | api/user/updatemobilenumber             |      | App\Http\Controllers\Api\UserApiController@update_mobile_number           | api,auth:api |
+|        | POST     | api/user/updateprofile                  |      | App\Http\Controllers\Api\UserApiController@update_profile                 | api,auth:api |
+|        | POST     | api/user/verifyemail                    |      | App\Http\Controllers\Api\UserApiController@verify_email                   | api          |
+|        | POST     | api/user/verifymobileotp                |      | App\Http\Controllers\Api\UserApiController@verify_mobile_otp              | api          |
+|        | GET|HEAD | api/userinfo                            |      | Closure                                                                   | api,auth:api |
+|        | POST     | api/v1/employees                        |      | App\Http\Controllers\Api\EmployeeController@store                         | api,auth:api |
+|        | GET|HEAD | api/v1/employees/{id?}                  |      | App\Http\Controllers\Api\EmployeeController@index                         | api,auth:api |
+|        | DELETE   | api/v1/employees/{id}                   |      | App\Http\Controllers\Api\EmployeeController@destroy                       | api,auth:api |
+|        | POST     | api/v1/employees/{id}                   |      | App\Http\Controllers\Api\EmployeeController@update                        | api,auth:api |
+|        | POST     | oauth/authorize                         |      | Laravel\Passport\Http\Controllers\ApproveAuthorizationController@approve  | web,auth     |
+|        | DELETE   | oauth/authorize                         |      | Laravel\Passport\Http\Controllers\DenyAuthorizationController@deny        | web,auth     |
+|        | GET|HEAD | oauth/authorize                         |      | Laravel\Passport\Http\Controllers\AuthorizationController@authorize       | web,auth     |
+|        | POST     | oauth/clients                           |      | Laravel\Passport\Http\Controllers\ClientController@store                  | web,auth     |
+|        | GET|HEAD | oauth/clients                           |      | Laravel\Passport\Http\Controllers\ClientController@forUser                | web,auth     |
+|        | DELETE   | oauth/clients/{client_id}               |      | Laravel\Passport\Http\Controllers\ClientController@destroy                | web,auth     |
+|        | PUT      | oauth/clients/{client_id}               |      | Laravel\Passport\Http\Controllers\ClientController@update                 | web,auth     |
+|        | POST     | oauth/personal-access-tokens            |      | Laravel\Passport\Http\Controllers\PersonalAccessTokenController@store     | web,auth     |
+|        | GET|HEAD | oauth/personal-access-tokens            |      | Laravel\Passport\Http\Controllers\PersonalAccessTokenController@forUser   | web,auth     |
+|        | DELETE   | oauth/personal-access-tokens/{token_id} |      | Laravel\Passport\Http\Controllers\PersonalAccessTokenController@destroy   | web,auth     |
+|        | GET|HEAD | oauth/scopes                            |      | Laravel\Passport\Http\Controllers\ScopeController@all                     | web,auth     |
+|        | POST     | oauth/token                             |      | Laravel\Passport\Http\Controllers\AccessTokenController@issueToken        | throttle     |
+|        | POST     | oauth/token/refresh                     |      | Laravel\Passport\Http\Controllers\TransientTokenController@refresh        | web,auth     |
+|        | GET|HEAD | oauth/tokens                            |      | Laravel\Passport\Http\Controllers\AuthorizedAccessTokenController@forUser | web,auth     |
+|        | DELETE   | oauth/tokens/{token_id}                 |      | Laravel\Passport\Http\Controllers\AuthorizedAccessTokenController@destroy | web,auth     |
++--------+----------+-----------------------------------------+------+---------------------------------------------------------------------------+--------------+
+
+C:\xampp\htdocs\php-laravel-rest-api-monolith>
